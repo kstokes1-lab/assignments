@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Interests | Kayla Stokes</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,34 +19,50 @@
 
 <header>
     <h1>Kayla Stokes</h1>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="interests.html">Interests</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Home'});">Home</a>
+
+        <a href="about.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'About'});">About</a>
+
+        <a href="work.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Work'});">Work</a>
+
+        <a href="interests.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Interests'});">Interests</a>
+
+        <a href="contact.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Contact'});">Contact</a>
     </nav>
 </header>
 
 <main>
-    <section class="section-box">
-        <h2>Interest Filter</h2>
-        <p>
-            Use the dropdown menu to filter my interests by category.
-        </p>
 
-        <label for="categoryFilter">Choose a category:</label>
-        <select id="categoryFilter" onchange="filterItems(this.value)">
-            <option value="">All</option>
-            <option value="Technology">Technology</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Music">Music</option>
-        </select>
+<section class="section-box">
 
-        <p id="result-count"></p>
+    <h2>Interest Filter</h2>
 
-        <div id="items-container" class="items-grid"></div>
-    </section>
+    <p>
+        Use the dropdown menu to filter my interests by category.
+    </p>
+
+    <label for="categoryFilter">Choose a category:</label>
+
+    <select id="categoryFilter" onchange="filterItems(this.value)">
+        <option value="">All</option>
+        <option value="Technology">Technology</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Music">Music</option>
+    </select>
+
+    <p id="result-count"></p>
+
+    <div id="items-container" class="items-grid"></div>
+
+</section>
+
 </main>
 
 <footer>
@@ -45,5 +70,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
