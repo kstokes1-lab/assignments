@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Kayla Stokes | Portfolio</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,35 +20,59 @@
 
 <header>
     <h1>Kayla Stokes</h1>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="interests.html">Interests</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Home'});">Home</a>
+
+        <a href="about.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'About'});">About</a>
+
+        <a href="work.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Work'});">Work</a>
+
+        <a href="interests.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Interests'});">Interests</a>
+
+        <a href="contact.html"
+           onclick="gtag('event', 'navigation_click', {'link_name': 'Contact'});">Contact</a>
     </nav>
 </header>
 
 <main>
+
     <section class="section-box hero">
+
         <div>
             <h2>Welcome</h2>
+
             <p>
-                Welcome to my final portfolio website. This site shows who I am, what I am learning,
-                and how I am building my skills in technology, project management, and digital strategy.
+                Welcome to my final portfolio website. This site highlights my work,
+                interests, and growth in web development, project management, and digital strategy.
             </p>
         </div>
 
-        <img src="images/profile.jpg" alt="Professional photo of Kayla Stokes" class="profile-img">
+        <img src="images/profile.jpg"
+             alt="Professional photo of Kayla Stokes"
+             class="profile-img"
+
+             onclick="gtag('event', 'profile_image_click', {
+             'image_name': 'Profile Image'
+             });">
+
     </section>
 
     <section class="section-box">
+
         <h2>Featured Focus</h2>
+
         <p>
-            My focus is combining communication, organization, and technology to support strong digital projects.
-            I am interested in web design because it helps me understand how structure, style, and user experience work together.
+            My focus is building strong communication, organization, and technical skills
+            while learning how websites are designed and structured professionally.
         </p>
+
     </section>
+
 </main>
 
 <footer>
