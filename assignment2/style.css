@@ -1,1 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
 
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: navy;
+    border-bottom: 2px solid navy;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+a {
+    color: darkblue;
+}
+
+.section-box {
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    background-color: white;
+}
